@@ -1,3 +1,17 @@
+#!/usr/bin/python
+
+"""
+Painting Baxter outline planner libaray.
+"""
+
+__author__    = 'David Qiu'
+__email__     = 'david@davidqiu.com'
+__website__   = 'www.davidqiu.com'
+__copyright__ = 'Copyright (C) 2017, David Qiu. All rights reserved.'
+
+
+import libPBUtils as utils
+
 import cv2
 import numpy as np
 import random
@@ -250,7 +264,7 @@ class TBrushstrokePlanner(object):
 
 
 if __name__ == '__main__':
-  target_image_raw = cv2.imread('data/008.png')
+  target_image_raw = cv2.imread('../data/008.png')
   target_image = cv2.cvtColor(target_image_raw, cv2.COLOR_BGR2GRAY)
   cur_image = np.zeros(target_image.shape, np.uint8)
   
